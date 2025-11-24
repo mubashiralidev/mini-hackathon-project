@@ -200,7 +200,7 @@ body {
 
 /* --- MAIN SECTION --- */
 .products-section {
-    padding: 60px 8%; /* Side padding for spacing */
+    padding: 60px 8%; 
     text-align: center;
     background-color: #ffffff;
 }
@@ -212,7 +212,7 @@ body {
     margin-bottom: 32px;
 }
 
-/* --- GRID CONTAINER (4 COLUMNS FIXED) --- */
+/* --- GRID CONTAINER  --- */
 .products-grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Strictly 4 columns */
@@ -222,15 +222,15 @@ body {
     margin-bottom: 40px;
 }
 
-/* --- PRODUCT CARD (EQUAL HEIGHT & DESIGN) --- */
+/* --- PRODUCT CARD --- */
 .product-card {
-    background-color: #F4F5F7; /* Matches image background */
+    background-color: #F4F5F7; 
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100%; /* Full height of grid cell */
+    height: 100%; 
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column; 
     border: none;
 }
 
@@ -238,14 +238,14 @@ body {
 .image-box {
     position: relative;
     width: 100%;
-    height: 220px; /* Fixed height for uniformity */
+    height: 220px; 
     flex-shrink: 0;
 }
 
 .image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crops image to fit perfectly */
+    object-fit: cover; 
     display: block;
 }
 
@@ -404,21 +404,7 @@ body {
     background-color: #B88E2F;
     color: #ffffff;
 }
-@media (max-width: 1200px) {
-    .products-grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 900px) {
-    .products-grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 600px) {
-    .products-grid-container {
-        grid-template-columns: 1fr;
-    }
-}
+
 /* --- INSPIRATION SECTION --- */
 .inspiration-section {
     background-color: #FCF8F3;
@@ -592,8 +578,6 @@ input[name="slider"] {
     background-color: #B88E2F;
     color: white;
 }
-
-/* Show the CORRECT arrow  */
 #s1:checked ~ .ins-slider-container .arrows-container .next-1 { display: flex; }
 #s2:checked ~ .ins-slider-container .arrows-container .next-2 { display: flex; }
 #s3:checked ~ .ins-slider-container .arrows-container .next-3 { display: flex; }
@@ -629,7 +613,7 @@ input[name="slider"] {
     border-radius: 50%;
 }
 
-/* Style Active Dot */
+/*  Active Dot */
 #s1:checked ~ .ins-slider-container .dots-container .dot1,
 #s2:checked ~ .ins-slider-container .dots-container .dot2,
 #s3:checked ~ .ins-slider-container .dots-container .dot3,
@@ -639,7 +623,6 @@ input[name="slider"] {
     background-color: transparent;
     border: 1px solid #B88E2F;
 }
-
 #s1:checked ~ .ins-slider-container .dots-container .dot1 .inner-dot,
 #s2:checked ~ .ins-slider-container .dots-container .dot2 .inner-dot,
 #s3:checked ~ .ins-slider-container .dots-container .dot3 .inner-dot,
@@ -681,13 +664,10 @@ input[name="slider"] {
     gap: 8px;
     padding: 0 10px;
 }
-
-/* --- COMMON IMAGE STYLES --- */
 .gallery-item {
     position: relative;
     overflow: hidden;
 }
-
 .gallery-item img {
     width: 100%;
     height: 100%;
@@ -695,80 +675,48 @@ input[name="slider"] {
     display: block; 
     transition: transform 0.3s ease;
 }
-
 .gallery-item:hover img {
     transform: scale(1.05);
 }
-/* 1. Left Tall Shelf */
 .item-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 7;
 }
-
-/* 2. Laptop Desk (Wide) */
 .item-2 {
     grid-column: 2 / 5;
     grid-row: 2 / 7; 
 }
-
-/* 3. Chair (Bottom Left) - Moved UP */
 .item-3 {
     grid-column: 1 / 3;
     grid-row: 7 / 11; 
 }
-
-/* 4. Vase/Pot (Center Left) - Moved UP */
 .item-4 {
     grid-column: 3 / 5;
     grid-row: 7 / 10; 
 }
-
-/* 5. CENTER MAIN (Dining Table) - Anchor */
 .item-5 {
     grid-column: 5 / 8;
     grid-row: 3 / 9; 
 }
-
-/* 6. Bedroom (Top Right Square) */
 .item-6 {
     grid-column: 8 / 11;
     grid-row: 2 / 6;
 }
-
-/* 7. Frames (Bottom Right Vertical) - Moved UP */
 .item-7 {
     grid-column: 11 / 13;
-    grid-row: 1 / 6; /* Bedroom ke barabar start */
+    grid-row: 1 / 6; 
 }
 
-/* 8. Kitchen Shelf (Small Horizontal) - Moved UP */
 .item-8 {
     grid-column: 8 / 10;
     grid-row: 6 / 11; 
 }
 
-/* 9. Brick Wall (Far Right Edge) */
 .item-9 {
     grid-column: 10 / 12;
     grid-row: 6 / 10; 
 }
 
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 768px) {
-    .gallery-grid {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        gap: 15px; 
-    }
-    
-    .gallery-item {
-        width: 100%;
-        height: 250px;
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
 /* footer */
 * {
     margin: 0;
@@ -860,174 +808,271 @@ body {
     font-size: 14px;
     color: #333;
 }
-/* =============================
-   NAVBAR RESPONSIVE
-============================= */
+/* ============================
+   TABLET RESPONSIVE 
+   (max-width: 900px)
+============================ */
+
 @media (max-width: 900px) {
 
+  /* NAVBAR */
   .navbar {
-    padding: 15px 25px;
+    padding: 15px 30px;
   }
-
   .nav-links {
-    display: none; /* mobile par hide */
+    display: none;
+  }
+  .icons {
+    gap: 18px;
   }
 
-  .icons i {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .logo img {
-    width: 40px;
-    height: 28px;
-  }
-
-  .logo h2 {
-    font-size: 20px;
-  }
-}
-
-
-/* =============================
-   HERO SECTION RESPONSIVE
-============================= */
-@media (max-width: 900px) {
+  /* HERO SECTION */
   .hero {
     height: 360px;
   }
-
   .hero-box {
     width: 320px;
     padding: 25px;
     top: 55%;
+    right: 5%;
   }
-
   .hero-box h1 {
     font-size: 26px;
-    line-height: 30px;
+    line-height: 32px;
+  }
+
+  /* BROWSE SECTION */
+  .browse-container {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .browse-box {
+    width: 260px;
+  }
+
+  /* PRODUCT GRID → 4 → 2 Columns */
+  .products-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* INSPIRATION SECTION */
+  .inspiration-section {
+    flex-direction: column;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .ins-text-content {
+    width: 100%;
+    text-align: center;
+  }
+  .ins-slider-container {
+    width: 100%;
+    height: 400px;
+  }
+
+  /* SHARE SETUP GALLERY */
+  .gallery-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(14, 40px);
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 50px 20px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
   }
 }
+/* -------------------------
+   TABLET RESPONSIVE (max 900px)
+-------------------------- */
+@media (max-width: 900px) {
 
-@media (max-width: 600px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* HERO */
   .hero {
-    height: 300px;
+    height: 380px;
   }
 
   .hero-box {
-    position: static;
-    transform: none;
-    margin: 20px;
-    width: auto;
+    width: 320px;
+    padding: 30px;
+    right: 5%;
+    top: 55%;
   }
-}
 
-
-/* =============================
-   BROWSE SECTION RESPONSIVE
-============================= */
-@media (max-width: 900px) {
+  /* BROWSE SECTION */
   .browse-container {
     flex-wrap: wrap;
     gap: 25px;
   }
 
   .browse-box {
-    width: 260px;
+    width: 45%;
+  }
+
+  /* PRODUCTS GRID (4 → 2 columns) */
+  .products-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* INSPIRATION SECTION */
+  .inspiration-section {
+    flex-direction: column;
+    padding-left: 5%;
+  }
+
+  .ins-text-content {
+    width: 100%;
+  }
+
+  .ins-slider-container {
+    width: 100%;
+  }
+
+  /* GALLERY GRID */
+  .gallery-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 6px;
+  }
+
+  .gallery-item {
+    grid-column: span 2 !important;
+    grid-row: span 3 !important;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 40px 20px;
+  }
+
+  .footer-container {
+    gap: 40px;
   }
 }
-
+/* -------------------------
+   MOBILE RESPONSIVE (max 600px)
+-------------------------- */
 @media (max-width: 600px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: none; /* Hide for now (best for mobile) */
+  }
+
+  /* HERO */
+  .hero {
+    height: 320px;
+  }
+
+  .hero-box {
+    width: 85%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 25px;
+    top: 60%;
+  }
+
+  .hero-box h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* BROWSE SECTION */
   .browse-container {
     flex-direction: column;
     align-items: center;
   }
 
   .browse-box {
-    width: 90%;
+    width: 80%;
   }
-}
 
+  /* PRODUCT GRID (4 → 1 column) */
+  .products-grid-container {
+    grid-template-columns: 1fr;
+  }
 
-/* =============================
-   INSPIRATION SECTION RESPONSIVE
-============================= */
-@media (max-width: 1000px) {
+  .text-box h3 {
+    font-size: 20px;
+  }
+
+  /* INSPIRATION SECTION */
   .inspiration-section {
-    flex-direction: column;
-    padding-left: 4%;
-    height: auto;
+    padding: 20px 0;
   }
 
   .ins-text-content {
-    width: 100%;
-    text-align: center;
+    width: 90%;
   }
 
   .ins-slider-container {
     width: 100%;
-    height: 420px;
+    height: 400px;
   }
-}
 
-@media (max-width: 600px) {
-  .slider-track {
-    gap: 14px;
-  }
   .slide {
-    width: 240px;
-    height: 300px;
+    width: 260px !important;
+    height: 350px !important;
   }
+
   .slide-content {
-    padding: 18px;
+    padding: 20px;
   }
-}
 
+  /* Override slider transform so it becomes scrollable */
+  .slider-track {
+    transform: none !important;
+    overflow-x: scroll;
+  }
 
-/* =============================
-   SHARE SETUP GALLERY RESPONSIVE
-============================= */
-@media (max-width: 992px) {
+  /* DOTS hide */
+  .dots-container {
+    display: none;
+  }
+
+  /* GALLERY GRID (stack everything) */
   .gallery-grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(12, 40px);
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 600px) {
   .gallery-item {
-    height: 200px;
+    grid-column: span 2 !important;
+    grid-row: span 2 !important;
   }
-}
 
-
-/* =============================
-   FOOTER RESPONSIVE
-============================= */
-@media (max-width: 900px) {
+  /* FOOTER */
   .footer {
-    padding: 40px 40px 20px;
+    padding: 30px 20px;
   }
 
   .footer-container {
     flex-direction: column;
-    gap: 35px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .footer {
-    padding: 35px 25px 20px;
-  }
-
-  .footer-about {
-    max-width: 100%;
+    gap: 30px;
   }
 
   .footer-newsletter .input-box {
     width: 100%;
   }
 }
+
+
